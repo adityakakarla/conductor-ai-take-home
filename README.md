@@ -1,4 +1,4 @@
-# PDF Numerical Value Extraction
+# Air Force Data Numerical Value Extraction
 
 This project extracts the highest numerical value from a PDF document, utilizing various approaches to ensure accuracy and flexibility. It employs techniques such as regular expressions, scale detection, and a language model (Llama 3.2) for parsing numerical data.
 
@@ -19,8 +19,7 @@ pip install PyPDF2 ollama
 Clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/yourusername/pdf-numerical-value-extraction.git
-cd pdf-numerical-value-extraction
+git clone https://github.com/adityakakarla/conductor-ai-take-home
 ```
 
 ## Usage
@@ -55,6 +54,8 @@ largest_number = find_largest_number('air_force_data.pdf', scale=True)
 ### Approach 3: Using Llama 3.2 to Parse Numerical Data
 
 This approach leverages the Llama 3.2 model to extract numerical values. While it may provide more context by understanding variations in text (like "$1000000" or "$1 million"), it is the least reliable and slower due to its reliance on an AI model.
+
+To run this, you will need to install Ollama and use the Llama 3.2 1B model. Other models can also be used, but you may experience significantly slower response times.
 
 ```python
 largest = find_largest_number_using_llama('air_force_data.pdf')
